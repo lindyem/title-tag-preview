@@ -30,7 +30,7 @@ function App() {
      
       <Description description={description} />
       <div>
-        <h3>{ description.length }</h3>
+        <h3>{ description.length} characters</h3>
        <Input showError={description.length > 160} changeHandler={handleDescriptionInput} label='description'/>
       </div>
     </Fragment>
