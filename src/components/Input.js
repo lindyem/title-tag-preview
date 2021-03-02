@@ -4,7 +4,7 @@ function Input({label, showError, changeHandler}) {
   return (
     <div>
       <input type="text" name={label} onChange={changeHandler}></input>
-          {showError && <div>error {label} too long</div>}
+          {showError && <div className="error">Error {label} too long</div>}
     </div>
   )
 }

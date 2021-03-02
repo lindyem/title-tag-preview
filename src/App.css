@@ -3,27 +3,37 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 .containerLeft {
   margin-bottom: 50px;
-}
-
-.containerRight {
 
 }
 
 .displayBox {
   border:  1px solid;
   border-radius: 8px;
-  width: 500px;
+  width: 600px;
+  height: 367px;
+  overflow-y: scroll;
+}
 
+.displayBox::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.displayBox {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .text {
-  width: 450px;
   text-align: left;
-  padding:50px 0px 50px 0px; 
+  padding: 50px 20px; 
   word-wrap: break-word;
-  overflow: hidden;
 }
 
+.placeholder {
+  padding: 20px;
+  color: lightgray;
+}

@@ -20,10 +20,6 @@ function App() {
 
   return (
     <Fragment>
-      <header>
-        <h1>SERP Preview Tool</h1>
-        <h3> PREVIEW YOUR TITLE TAG AND META DESCRIPTION </h3>
-      </header>
 
       <div className="container">
         <div className="containerLeft">
@@ -34,21 +30,21 @@ function App() {
         
           <h2>Enter Your Description:</h2>
             <h4>Max 160 characters</h4>
-              <h3>{ description.length} characters</h3>
+              <h4>{ description.length} characters</h4>
                 <Input showError={description.length > 160} changeHandler={handleDescriptionInput} label='description'/>
         </div>
 
         <div className="containerRight">
           <div className="displayBox">
-            <div className="text">
-              <div id="resultTitle">
-                <Title title={title}  />
-              </div>
-              <div id="resultDescription">
-                <Description description={description} />
-              </div>
-              
-              </div>
+            {(title || description) ? (
+              <div className="text">
+                  <Title title={title}  />
+                  <Description description={description} />
+                
+              </div> ) : (
+                <div className="placeholder">PREVIEW YOUR TITLE TAG AND META DESCRIPTION</div>
+              )
+              }
             </div>
            </div>
           </div>

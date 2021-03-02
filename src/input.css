@@ -6,13 +6,9 @@ input {
   padding: 10px;
 }
 
-.container {
- display: flex;
-}
 
 .textRender {
 text-align: left;
-width: 350px;
 font-family: Arial, sans-serif;
 }
 
@@ -28,4 +24,9 @@ font-family: Arial, sans-serif;
   color: #545454;
   font-size: 13px;
   line-height: 1.4;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
 }

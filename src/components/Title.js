@@ -2,7 +2,6 @@ import '../input.css'
 
 function Title(props) {
   return (
-      <div className="container">
 
       <div className="textRender">
             <div className="faIcon">{props.title.length > 60 && <i style={{ color: 'red' }} className="fa fa-exclamation-triangle"></i>}
@@ -12,7 +11,6 @@ function Title(props) {
               {props.title}
             </div>
           </div>
-      </div>
   )
 }
 
