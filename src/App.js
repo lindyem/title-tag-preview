@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import Title from './components/Title'
 import Description from './components/Description'
+import Input from './components/Input'
 import './App.css';
 
 
@@ -18,21 +19,20 @@ function App() {
 
   return (
     <Fragment>
+      <h1> PREVIEW YOUR TITLE TAG AND META DESCRIPTION </h1>
+      
 
       <Title title={title} />
-      <input type="text" title="title" onChange={ handleTitleInput } ></input>
-      {title.length > 60 && <div>error title too long</div>}
       <div>
-        <h3>{ title.length }</h3>
+        <h4>{ title.length } characters</h4>
+        <Input showError={title.length > 60} changeHandler={handleTitleInput} label='title'/>
       </div>
-
+     
       <Description description={description} />
-      <input type="text" description="description" onChange={ handleDescriptionInput } ></input>
-      {title.length > 160 && <div>error description too long</div>}
       <div>
         <h3>{ description.length }</h3>
+       <Input showError={description.length > 160} changeHandler={handleDescriptionInput} label='description'/>
       </div>
-
     </Fragment>
   );
 }
