@@ -28,7 +28,7 @@ function App() {
 
       <Description description={description} />
       <input type="text" description="description" onChange={ handleDescriptionInput } ></input>
-      {title.length > 160 && <div>error title too long</div>}
+      {title.length > 160 && <div>error description too long</div>}
       <div>
         <h3>{ description.length }</h3>
       </div>
