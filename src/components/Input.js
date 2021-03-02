@@ -1,3 +1,4 @@
+import '../input.css'
 
 function Input({label, showError, changeHandler}) {
   return (
